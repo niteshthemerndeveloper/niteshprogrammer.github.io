@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+*{
+  box-sizing: border-box;
+}
+body{
+  align-items: center;
+  background-color: rgb(144, 144, 225);
+  display: flex;
+  height: 80vh;
+  justify-content:center;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
+}
+.search-container{
+  position: relative;
+  height: 50px;
+}
+.search-container input{
+  background-color: #fff;
+  border: 0px;
+  font-size: 1.2rem;
+  height: 50px;
+  padding: 15px;
+  width: 50px;
+  transition: width 0.3s ease;
+}
+.btn{
+  background-color: #fff;
+  border: 0px;
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px; 
+  transition: transform 0.3s ease;
+}
+.btn:focus, .input:focus{
+  outline: none;
+}
+.search-container.active .input{
+  width: 200px;
+}
+.search-container.active .btn{
+  transform: translateX(198px);
+}
