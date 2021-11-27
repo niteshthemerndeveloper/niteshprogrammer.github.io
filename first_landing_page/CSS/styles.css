@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  background: url('/Images/weather.png');
+  box-sizing: border-box;
+  max-height: 100vh;
+}
+
+.landing-form{
+  display: flex;
+  flex-direction: row;
+  max-height: 100vh;
+}
+
+.hero-image{
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+  max-height: 100vh;
+  max-width: 65.5%;
+  overflow: hidden;
+}
+
+.hero-image img{
+  max-height: auto;
+  min-width: 100%;
+}
+
+.landing-content{
+  align-items: center;
+  background-color: #222;
+  /* border: 2px solid #f1f1f1; */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 35%;
+}
+
+.content-area{
+  position: relative;
+  z-index: 1;
+}
+
+.content-area p{
+  color: #fff;
+  font-size: 2.2vh;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.content-area p a{
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.content-area p a:hover{
+  cursor: pointer;
+  color: rgb(187, 181, 181);
+}
+
+.content-area h2{
+  color: rgb(255, 255, 255);
+  font-size: 2.3vw;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 600;
+  margin: 1rem 0;
+  transition: all 0.6s ease-in;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.content-area input{
+  background-color: rgb(24, 137, 172);
+  border: 2px solid rgb(24, 137, 172);
+  border-radius: 0.2rem;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.6px;
+  margin-bottom: 1rem;
+  padding: 1.3vh 11vh;
+}
+
+div.button{
+  text-align: center;
+}
+
+.content-area input:hover{
+  cursor: pointer;
+}
+
+.content-area .close{
+  cursor: pointer;
+  position: absolute;
+  right: 2px;
+  top: -20%;
+}
+
+.show-message{
+  background: #333333;
+  color: #f3f3f3;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  margin: 40vh auto;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1444px) {
+  .landing-form{
+    flex-direction: column;
+  }
+  .hero-image{
+    display: none;
+  }
+
+  .landing-content::before{
+    background: rgba(0, 0, 0, 0.6);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .landing-content{
+    background: url("/Images/TIM-4-Steps-One-Year.png");
+    background-position: top center;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100%;
+  }
+
+  .content-area .close{
+    top: -80px;
+    right: -40px;
+  }
+  .content-area h2{
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 787px){
+  .content-area h2{
+    font-size: 1.9rem;
+  }
+  .content-area .close{
+    right: 2px;
+  }
+}
