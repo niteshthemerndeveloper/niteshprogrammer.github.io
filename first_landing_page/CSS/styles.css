@@ -136,7 +136,7 @@ div.button{
   }
 
   .landing-content{
-    background: url("./Images/TIM-4-Steps-One-Year.png");
+    background: url("../Images/TIM-4-Steps-One-Year.png");
     background-position: top center;
     background-size: cover;
     min-height: 100vh;
